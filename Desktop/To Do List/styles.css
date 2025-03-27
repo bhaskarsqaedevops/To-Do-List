@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff5e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.todo-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 350px;
+    padding: 20px;
+    position: relative;
+}
+
+.todo-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><defs><pattern id="pattern" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M25 0 L50 25 L25 50 L0 25 Z" fill="rgba(255,165,0,0.1)"/></pattern></defs><rect width="100%" height="100%" fill="url(%23pattern)"/></svg>');
+    opacity: 0.3;
+    z-index: -1;
+    border-radius: 10px;
+}
+
+.todo-header {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.tasks-label, .notes-label {
+    background-color: #ff6b35;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 0.7em;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.task-list {
+    margin-bottom: 15px;
+}
+
+.task-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.task-list li {
+    border-bottom: 1px solid #f0f0f0;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-area {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.input-area input {
+    flex-grow: 1;
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.input-area button {
+    background-color: #ff6b35;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.notes-section textarea {
+    width: 100%;
+    height: 100px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    resize: vertical;
+}
+
+.delete-btn {
+    background-color: #ff6b35;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
