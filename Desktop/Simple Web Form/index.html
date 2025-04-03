@@ -11,12 +11,12 @@
     <form id="registrationForm">
         <div class="form-group">
             <label for="firstName">First Name</label>
-            <input type="text" id="firstName" name="firstName" required>
+            <input type="text" id="firstName" name="firstName" minlength="8" maxlength="18" required>
         </div>
         
         <div class="form-group">
             <label for="lastName">Last Name</label>
-            <input type="text" id="lastName" name="lastName" required>
+            <input type="text" id="lastName" name="lastName" minlength="8" maxlength="18" required>
         </div>
         
         <div class="form-group">
@@ -27,10 +27,16 @@
                 <option value="Female">Female</option>
             </select>
         </div>
+
+        <div class="form-group">
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" min="18" max="66" required>
+
+        </div>
         
         <div class="form-group">
             <label for="mobileNumber">Mobile Number</label>
-            <input type="tel" id="mobileNumber" name="mobileNumber" required>
+            <input type="tel" id="mobileNumber" name="mobileNumber" minlength="10" maxlength="10" required>
         </div>
         
         <div class="form-group">
@@ -39,8 +45,10 @@
         </div>
         
         <button type="submit">Submit</button>
+                                            
     </form>
     
+   
     <div id="formResults">
         <h3>Submitted Information</h3>
         <div class="result-item">
